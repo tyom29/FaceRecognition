@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "mxNUo8Bb0+KmpTB3Mrq1kniDOTP2nwVM911YHqlJY3HKEG2MafpC3yFnq8eIyP9dYyH2fgtEjvIXDES3kQqijw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\artyom.yeprikyan\\Desktop\\FINCA Projects\\FaceRecognition\\FINCA.FaceRecognition.Service\\FINCA.FaceRecognition.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\awssdk.core\\3.5.1.7\\awssdk.core.3.5.1.7.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\awssdk.rekognition\\3.5.0.9\\awssdk.rekognition.3.5.0.9.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\runtime.any.system.runtime\\4.3.0\\runtime.any.system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0\\runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\system.private.uri\\4.3.0\\system.private.uri.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyom.yeprikyan\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

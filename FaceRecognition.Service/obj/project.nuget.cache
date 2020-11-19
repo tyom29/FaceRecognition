@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "NkS5oX5YcJCYE+TIIjyDXjkd8tuKhU9d8On3q0oPnV2a0W/8HWgSb6OLkOwZNJBAbA5PHkdL05EqKrYa37059g==",
+  "success": true,
+  "projectFilePath": "D:\\Desktop\\FaceRecognition\\FINCA.FaceRecognition.Service\\FaceRecognition.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\artyo\\.nuget\\packages\\awssdk.core\\3.5.1.7\\awssdk.core.3.5.1.7.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\awssdk.rekognition\\3.5.0.9\\awssdk.rekognition.3.5.0.9.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\artyo\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
