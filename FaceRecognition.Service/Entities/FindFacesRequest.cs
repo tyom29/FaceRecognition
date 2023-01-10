@@ -1,7 +1,6 @@
-namespace FaceRecognition.Service.Api.Entities
+namespace FaceRecognition.Service.Api.Entities;
+
+public class FindFacesRequest
 {
-    public class FindFacesRequest
-    {
-        public string SourceImage { get; set; }
-    }
+    public string SourceImage { get; set; }
 }

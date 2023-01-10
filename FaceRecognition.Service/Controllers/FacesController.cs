@@ -1,56 +1,56 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using FaceRecognition.Service.Api.Domain;
 using FaceRecognition.Service.Api.Entities;
+using Microsoft.AspNetCore.Mvc;
 
-namespace FaceRecognition.Service.Api.Controllers
+namespace FaceRecognition.Service.Api.Controllers;
+
+[ApiController]
+[Route("api/v1/Detection")]
+public class FacesController : ControllerBase
 {
-    [ApiController]
-    [Route("api/Detection")]
-    public class FacesController : ControllerBase
+    private readonly IServiceCompareFaces _serviceCompareFaces;
+    private readonly IServiceDetectFaces _serviceDetectFaces;
+
+    public FacesController(
+        IServiceDetectFaces serviceDetectFaces,
+        IServiceCompareFaces serviceCompareFaces)
     {
-        private readonly IServiceDetectFaces _serviceDetectFaces;
-        private readonly IServiceCompareFaces _serviceCompareFaces;
+        _serviceDetectFaces = serviceDetectFaces;
+        _serviceCompareFaces = serviceCompareFaces;
+    }
 
-        public FacesController(
-            IServiceDetectFaces serviceDetectFaces,
-            IServiceCompareFaces serviceCompareFaces)
+
+    [HttpGet]
+    public async Task<IActionResult> GetFaceMatches([FromBody] FindFacesRequest request)
+    {
+        try
         {
-            _serviceDetectFaces = serviceDetectFaces;
-            _serviceCompareFaces = serviceCompareFaces;
+            var response = await _serviceDetectFaces.DetectFacesAsync(
+                request.SourceImage
+            );
+
+            return StatusCode(HttpStatusCode.OK.GetHashCode(), response);
         }
-
-        [HttpPost("FaceMatch")]
-        public async Task<IActionResult> GetFaceMatches([FromBody] FaceMatchRequest a)
+        catch (Exception ex)
         {
-            try
-            {
-                var result = await _serviceCompareFaces.CompareFacesAsync(a.SourceImage,a.TargetImage);
-                return StatusCode(HttpStatusCode.OK.GetHashCode(), result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(HttpStatusCode.InternalServerError.GetHashCode(), ex.Message);
-            }
+            return StatusCode(HttpStatusCode.InternalServerError.GetHashCode(), ex.Message);
         }
+    }
 
-        [HttpGet("findfaces")]
-        public async Task<IActionResult> GetFaceMatches([FromBody] FindFacesRequest request)
+    [HttpPost]
+    public async Task<IActionResult> GetFaceMatches([FromBody] FaceMatchRequest a)
+    {
+        try
         {
-            try
-            {
-                var response = await _serviceDetectFaces.DetectFacesAsync(
-                    request.SourceImage
-                );
-
-                return StatusCode(HttpStatusCode.OK.GetHashCode(), response);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(HttpStatusCode.InternalServerError.GetHashCode(), ex.Message);
-            }
+            var result = await _serviceCompareFaces.CompareFacesAsync(a.SourceImage, a.TargetImage);
+            return StatusCode(HttpStatusCode.OK.GetHashCode(), result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(HttpStatusCode.InternalServerError.GetHashCode(), ex.Message);
         }
     }
 }
